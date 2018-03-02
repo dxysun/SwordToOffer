@@ -22,6 +22,4 @@ public class PrintTwoTreeUpToDown {
         }
         return  list;
     }
-
-
 }
