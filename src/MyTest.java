@@ -1,6 +1,12 @@
+import java.math.BigDecimal;
+import java.math.BigInteger;
+import java.util.Date;
+import java.util.Scanner;
+
 public class MyTest {
 
-    String str=new String("hello");
+//    String str=new String("hello");
+    String str= "hello";
     char[]ch={'a','b'};
 
     public void change(String str,char ch[]){
@@ -36,17 +42,25 @@ public class MyTest {
         a[j]=tmp;
     }
     public static void main(String args[]){
-      /*  MyTest ex=new MyTest();
+    /*    MyTest ex=new MyTest();
         ex.change(ex.str,ex.ch);
         System.out.print(ex.str+" and ");
         System.out.print(ex.ch);*/
        /* String s= "hello";
         String t= "hello";
         char c[] ={'h','e','l','l','o'};*/
-        int[] a={2,4,6,8,3,6,9,12};
+       /* int[] a={2,4,6,8,3,6,9,12};
         doSomething(a,0,a.length-1);
         for(int i=0;i<=a.length-1;i++)
-            System.out.print(a[i]+" ");
+            System.out.print(a[i]+" ");*/
+      //  Scanner in = new Scanner(System.in);
+
+        System.out.printf("Hello,%s.Next year ,you'll be %d\n","abc",22);
+        System.out.println(10000.0/3.0);
+        System.out.printf("%,.2f\n",10000.0/3.0);
+        System.out.printf("%8.2f\n",10000.0/3.0);  //八个字符的宽度
+        BigInteger b =BigInteger.valueOf(1000);
+        BigDecimal d = BigDecimal.valueOf(100.0);
 
     }
 }

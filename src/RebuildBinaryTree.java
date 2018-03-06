@@ -1,6 +1,7 @@
 import java.util.ArrayList;
+import java.util.LinkedList;
 import java.util.Stack;
-
+import java.util.Queue;
 /**
  *题目描述
  *输入某二叉树的前序遍历和中序遍历的结果，请重建出该二叉树。
@@ -263,6 +264,7 @@ public class RebuildBinaryTree {
         int[] mid_list = {4,11,2,1,5,3,8,6};
 //        int[] pre_list = {10,5,4,7,12};
 //        int[] mid_list = {4,5,7,10,12};
+        Queue<Integer> q = new LinkedList<>();
         TreeNode node = reConstructBinaryTree(pre_list,mid_list);
         pre_out(node);
         mid_out(node);
