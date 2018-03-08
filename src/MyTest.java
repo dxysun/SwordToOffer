@@ -1,5 +1,6 @@
 import java.math.BigDecimal;
 import java.math.BigInteger;
+import java.time.LocalDate;
 import java.util.Date;
 import java.util.Scanner;
 
@@ -54,13 +55,26 @@ public class MyTest {
         for(int i=0;i<=a.length-1;i++)
             System.out.print(a[i]+" ");*/
       //  Scanner in = new Scanner(System.in);
-
+/*
         System.out.printf("Hello,%s.Next year ,you'll be %d\n","abc",22);
         System.out.println(10000.0/3.0);
         System.out.printf("%,.2f\n",10000.0/3.0);
         System.out.printf("%8.2f\n",10000.0/3.0);  //八个字符的宽度
         BigInteger b =BigInteger.valueOf(1000);
-        BigDecimal d = BigDecimal.valueOf(100.0);
+        BigDecimal d = BigDecimal.valueOf(100.0);*/
+
+        LocalDate date = LocalDate.now();
+        int today = date.getDayOfMonth();
+        int year = date.getYear();
+        System.out.println(date.getDayOfMonth());
+        System.out.println(date.getDayOfWeek());
+        System.out.println(date.getDayOfYear());
+        System.out.println(date.getMonthValue());
+        System.out.println(date.minusDays(today));
+        System.out.println(date.minusYears(1));
+
+
+
 
     }
 }
