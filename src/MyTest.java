@@ -72,9 +72,5 @@ public class MyTest {
         System.out.println(date.getMonthValue());
         System.out.println(date.minusDays(today));
         System.out.println(date.minusYears(1));
-
-
-
-
     }
 }
