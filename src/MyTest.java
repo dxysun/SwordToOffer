@@ -11,6 +11,7 @@ public class MyTest {
     char[]ch={'a','b'};
 
     public void change(String str,char ch[]){
+
         str="test ok";
         ch[0]='c';
 
