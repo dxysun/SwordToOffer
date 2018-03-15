@@ -260,16 +260,19 @@ public class RebuildBinaryTree {
     }
     public static void main(String[] args)
     {
-        int[] pre_list = {1,2,4,11,3,5,6,8};
-        int[] mid_list = {4,11,2,1,5,3,8,6};
-//        int[] pre_list = {10,5,4,7,12};
-//        int[] mid_list = {4,5,7,10,12};
+        /*int[] pre_list = {1,2,4,11,3,5,6,8};
+        int[] mid_list = {4,11,2,1,5,3,8,6};*/
+        int[] pre_list = {10,5,4,7,12};
+        int[] mid_list = {4,5,7,10,12};
         Queue<Integer> q = new LinkedList<>();
         TreeNode node = reConstructBinaryTree(pre_list,mid_list);
         pre_out(node);
+        System.out.println();
         mid_out(node);
         System.out.println();
-        ArrayList<ArrayList<Integer>> list = printTree(node,18);
+        System.out.println(TreeNodeDepth.TreeDepth(node));
+
+       /* ArrayList<ArrayList<Integer>> list = printTree(node,18);
         for (ArrayList<Integer> l:
                 list
              ) {
@@ -279,7 +282,7 @@ public class RebuildBinaryTree {
                 System.out.print(i + " ");
             }
             System.out.println();
-        }
+        }*/
        /* for (TreeNode n:
                 a
              ) {

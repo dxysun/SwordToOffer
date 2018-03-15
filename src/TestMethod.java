@@ -60,25 +60,31 @@ public class TestMethod extends People{
         System.out.println("after p1 :" + p1.getName());
         System.out.println("after p2 :" + p2.getName());*/
 
-/*        float f = 5;
+        float f = 5;
         Float f1 = 45f;
         double d = 45;
         Double d1 =  45d;
-        System.out.println("f :" + d);*/
+        System.out.println("f :" + d);
 
-        Integer a = new Integer(24);
-        Integer b = 24;
 
+        Integer a = new Integer(123);
+        Integer b = 123;
+       /*  int a = 148;
+       int b = 128;*/
+        Integer c = a;
+        c ++;
+        System.out.println("a:" + a);
+        System.out.println("c:" + c);
         if(a == b)
             System.out.println("a == b");
         else
             System.out.println("a != b");
 
-        if(b.equals(a))
+       /* if(b.equals(a))
             System.out.println("a equals b");
         else
             System.out.println("a !equals b");
-
+*/
         //Class a = int.class;
 //        TestMethod test = new TestMethod();
 //        ArrayList<People> p =  test.getLsit();
