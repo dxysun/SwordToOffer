@@ -83,6 +83,15 @@ public class RebuildBinaryTree {
         System.out.print(node.val + " ");
         mid_out(node.right);
     }
+    public static void after_out(TreeNode node)
+    {
+        if(node == null)
+            return;
+        mid_out(node.left);
+
+        mid_out(node.right);
+        System.out.print(node.val + " ");
+    }
     public static TreeNode reConstructBinaryTree(int [] pre,int [] in) {
         TreeNode tree = constructBinaryTree(pre,in,pre.length);
         return tree;
