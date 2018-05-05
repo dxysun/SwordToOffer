@@ -18,6 +18,5 @@ public class AddWithoutOperate {
     public static void main(String[] args)
     {
         System.out.println(Add(3,5));
-
     }
 }
