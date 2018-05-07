@@ -59,5 +59,11 @@ public class MyTest {
         System.out.println(date.minusDays(today));
         System.out.println(date.minusYears(1));
 
+        float a = 11;
+        double d = 1.2e112;
+        String str = "1243";
+        str.substring(3);
+
+
     }
 }
