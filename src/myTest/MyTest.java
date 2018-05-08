@@ -63,6 +63,7 @@ public class MyTest {
         double d = 1.2e112;
         String str = "1243";
         str.substring(3);
+        Integer b = new Integer(123);
 
 
     }
