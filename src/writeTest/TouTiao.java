@@ -457,10 +457,176 @@ a、b、c：
 0<a、b、c<10^9（20%）
  */
 
+
+
+   public static void ThreeOfOne()
+   {
+       Scanner in = new Scanner(System.in);
+
+       int count = 0;
+
+       while (in.hasNextLine()) {//注意while处理多个case
+           String str = in.nextLine();
+
+           boolean b1 = false;
+           boolean b2 = false;
+           if(str.contains("//"))
+           {
+               count ++;
+           }
+           char[] c = str.toCharArray();
+           for(int  i = 0;i < c.length - 1;i ++)
+           {
+               if(!b2)
+               {
+                   if(c[i] == '"')
+                   {
+                       b2 = true;
+                       continue;
+                   }
+                   if(!b1)
+                   {
+                       if(c[i] == '/' && c[i + 1] == '*')
+                       {
+                           b1 = true;
+                       }
+                   }
+                   else
+                   {
+                       if(c[i] == '*' && c[i + 1] == '/')
+                       {
+                           b1 = false;
+                           count ++;
+                       }
+                   }
+
+               }
+               else
+               {
+                   if(c[i] == '"')
+                   {
+                       b2 = false;
+                   }
+               }
+
+           }
+       }
+       System.out.println(count);
+
+   }
+   public static void ThreeOfTwo()
+   {
+
+       Scanner in = new Scanner(System.in);
+
+       while (in.hasNext())
+       {
+           int m = in.nextInt();
+           int n = in.nextInt();
+           String[] lib = new String[m];
+           String[] pre = new String[n];
+           in.nextLine();
+           for(int i = 0;i < m;i ++)
+           {
+               lib[i] = in.nextLine();
+           }
+           in.nextLine();
+           for(int i = 0;i < n;i ++)
+           {
+               pre[i] = in.nextLine();
+           }
+
+
+           for(int i = 0;i < n; i ++)
+           {
+               boolean b = true;
+               for(int j = 0;j < m;j ++)
+               {
+                   if(pre[i].startsWith(lib[j]))
+                   {
+                       System.out.println("1");
+                       b = false;
+                       break;
+                   }
+               }
+               if(b)
+                   System.out.println("-1");
+           }
+           System.out.println();
+           in.nextLine();
+
+       }
+
+   }
     public static void main(String[] args) {
-        OneV2();
+        Scanner in = new Scanner(System.in);
+
+        int N = in.nextInt();
+
+        for(int i = 0;i < N;i ++)
+        {
+            int n = in.nextInt();
+            int m = in.nextInt();
+            int[] ms = new int[m];
+            for(int j = 0;j < m;j ++)
+            {
+                ms[j] = in.nextInt();
+            }
+
+            int[] as = new int[n];
+
+            int posm = 0;
+            int count = n;
+            int posn = 0;
+            while (count > 1)
+            {
+                int taotai = getTaotai(ms[posm],as,posn);
+            //    System.out.println(taotai);
+                posm ++;
+                if(posm == m)
+                    posm = 0;
+                as[taotai] = 1;
+                posn = taotai + 1;
+                if(posn == n)
+                    posn = 0;
+                while (as[posn] != 0)
+                {
+                    posn ++;
+                    if(posn == n)
+                        posn = 0;
+                }
+                count --;
+            }
+            for(int p = 0;p < n;p ++)
+            {
+                if(as[p] == 0)
+                {
+                    System.out.println(p);
+                    break;
+                }
+
+            }
+
+        }
 
 
+
+    }
+    public static int getTaotai(int m,int[] as,int posn)
+    {
+        int count = 0;
+        while (count < m)
+        {
+            if(posn == as.length)
+                posn = 0;
+            if(as[posn] == 0)
+            {
+                count ++;
+            }
+            posn ++;
+
+        }
+        return posn - 1 ;
     }
 
 }
