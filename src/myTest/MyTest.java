@@ -10,10 +10,11 @@ import java.util.TreeMap;
 public class MyTest {
 
 //    String str=new String("hello");
-    String str= "hello";
+    static String str;
+     String s;
     char[]ch={'a','b'};
 
-    public void change(String str,char ch[]){
+     void change(String str,char ch[]){
 
         str="test ok";
         ch[0]='c';
@@ -49,7 +50,7 @@ public class MyTest {
     public static void main(String args[]){
 
 
-        LocalDate date = LocalDate.now();
+       /* LocalDate date = LocalDate.now();
         int today = date.getDayOfMonth();
         int year = date.getYear();
         System.out.println(date.getDayOfMonth());
@@ -63,7 +64,8 @@ public class MyTest {
         double d = 1.2e112;
         String str = "1243";
         str.substring(3);
-        Integer b = new Integer(123);
+        Integer b = new Integer(123);*/
+        System.out.println("str=" + str);
         
 
 

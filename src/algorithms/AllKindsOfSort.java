@@ -5,31 +5,36 @@ import java.util.Arrays;
 public class AllKindsOfSort {
 
 
+    private static boolean less(Comparable v, Comparable w) {
+        return v.compareTo(w) < 0;
+    }
+
+    private static void swap(int[] a, int i, int j) {
+        int t = a[i];
+        a[i] = a[j];
+        a[j] = t;
+    }
     public static void selectSort(int[] a)
     {
         int length = a.length;
-        int temp = 0;
         int flag = 0;
         for(int i = 0;i < length;i ++)
         {
-            temp = a[i];
             flag = i;
             for(int j = i + 1;j < length;j ++)
             {
-                if(a[j] < temp)
+                if(less(a[j],a[flag]))
                 {
-                    temp = a[j];
                     flag = j;
                 }
             }
-            a[flag] = a[i];
-            a[i] = temp;
+            swap(a,i,flag);
         }
     }
     public static void insertSort(int[] a)
     {
         int length = a.length;
-        for(int i = 1;i < length;i ++)
+        /*for(int i = 1;i < length;i ++)
         {
             int j = i;
             int temp = a[i];
@@ -42,6 +47,13 @@ public class AllKindsOfSort {
                 }
                 a[j] = temp;
             }
+        }*/
+        for(int i = 1;i < length;i ++)
+        {
+            for(int j = i;j > 0 && less(a[j],a[j - 1]);j --)
+            {
+                swap(a,j,j - 1);
+            }
         }
     }
     public static void bubbleSort(int[] a)
@@ -51,11 +63,9 @@ public class AllKindsOfSort {
         {
             for(int j = 0;j < length - 1;j ++)
             {
-                if(a[j] > a[j + 1])
+                if(less(a[j + 1],a[j]))
                 {
-                    int temp = a[j];
-                    a[j] = a[j + 1];
-                    a[j + 1] = temp;
+                    swap(a,j,j + 1);
                 }
             }
             length --;
@@ -131,7 +141,7 @@ public class AllKindsOfSort {
     {
         int length = a.length;
         int i,j,step,temp;
-        for(step = length/2;step > 0;step /= 2)
+       /* for(step = length/2;step > 0;step /= 2)
         {
             for(i = 0;i <length;i ++)
             {
@@ -146,6 +156,33 @@ public class AllKindsOfSort {
                         break;
                 }
                 a[j - step] = temp;
+            }
+        }*/
+
+        /*for(step = length/2;step > 0;step /= 2)
+        {
+            for(i = 0;i <length;i ++)
+            {
+                temp = i;
+                for(j = i + step;j < length;j += step)
+                {
+                    if(less(a[j],a[temp]))
+                    {
+                        temp = j;
+                    }
+                }
+                swap(a,i,temp);
+            }
+        }*/
+
+        for(step = length/2;step > 0;step /= 2)
+        {
+            for(i = step;i <length;i ++)
+            {
+                for(j = i;j >= step && less(a[j],a[j - step]);j -= step)
+                {
+                    swap(a,j,j - step);
+                }
             }
         }
     }
@@ -198,7 +235,7 @@ public class AllKindsOfSort {
 //        bubbleSort(a);
 //        mergeSort(a,0,a.length - 1);
 //        quickSort(a,0,a.length - 1);
-//        shellSort(a);
+    //    shellSort(a);
         minHeapSort(a);
         System.out.println(Arrays.toString(a));
 
