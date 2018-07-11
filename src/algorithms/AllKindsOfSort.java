@@ -14,11 +14,16 @@ public class AllKindsOfSort {
         a[i] = a[j];
         a[j] = t;
     }
+    public static void swap2(int[] arr, int i, int j) {
+        arr[i] = arr[i] ^ arr[j];
+        arr[j] = arr[i] ^ arr[j];
+        arr[i] = arr[i] ^ arr[j];
+    }
     public static void selectSort(int[] a)
     {
         int length = a.length;
         int flag = 0;
-        for(int i = 0;i < length;i ++)
+        for(int i = 0;i < length - 1;i ++)
         {
             flag = i;
             for(int j = i + 1;j < length;j ++)
@@ -65,7 +70,7 @@ public class AllKindsOfSort {
             {
                 if(less(a[j + 1],a[j]))
                 {
-                    swap(a,j,j + 1);
+                    swap2(a,j,j + 1);
                 }
             }
             length --;
@@ -229,14 +234,15 @@ public class AllKindsOfSort {
     }
     public static void main(String[] args)
     {
-        int[] a = {38,65,97,76,13,27,49};
+        int[] a = {38,38,97,76,13,27,49};
+        swap2(a,1,1);
 //        selectSort(a);
 //        insertSort(a);
 //        bubbleSort(a);
 //        mergeSort(a,0,a.length - 1);
 //        quickSort(a,0,a.length - 1);
     //    shellSort(a);
-        minHeapSort(a);
+//        minHeapSort(a);
         System.out.println(Arrays.toString(a));
 
     }
