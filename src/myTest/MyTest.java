@@ -7,6 +7,7 @@ import java.time.LocalDate;
 import java.util.*;
 import java.util.concurrent.ExecutorService;
 import java.util.concurrent.Executors;
+import java.util.concurrent.locks.ReentrantLock;
 
 public class MyTest {
 
@@ -51,89 +52,43 @@ public class MyTest {
         a[j] = tmp;
     }
 
+//    volatile
     public static void main(String args[]) {
 
+        float f1 = 34;
+        float f2 = 3.14F;
+        Float f3 = 23F;
+        double d1 = 8;
+        Double d2 = 234d;
 
-       /* LocalDate date = LocalDate.now();
-        int today = date.getDayOfMonth();
-        int year = date.getYear();
-        System.out.println(date.getDayOfMonth());
-        System.out.println(date.getDayOfWeek());
-        System.out.println(date.getDayOfYear());
-        System.out.println(date.getMonthValue());
-        System.out.println(date.minusDays(today));
-        System.out.println(date.minusYears(1));
+        Integer a = -16;
 
-        float a = 11;
-        double d = 1.2e112;
-        String str = "1243";
-        str.substring(3);
-        Integer b = new Integer(123);*/
-      /*  String s = "/dubbomesh/com.some.package.IHelloService/192.168.100.100:2000/3";
-        int index = s.lastIndexOf("/");
-        String weight = s.substring(index + 1,s.length());
-        System.out.println("weight=" + weight);
-        String temp = s.substring(0,index);
-        index = temp.lastIndexOf("/");
-        String endpointStr = s.substring(index + 1,temp.length());
-        System.out.println("endpointStr=" + endpointStr);
-        String strKey = MessageFormat.format("/{0}/{1}/{2}/{3}/{4}","abc","def","htl","sgas","1");
-        System.out.println("strKey=" + strKey);*/
-        /*MyTest t =  new MyTest();
-        t.testNode();*/
-       /* Map<String,String> map = new HashMap<>();
+        a = a>>>1;
 
-        int sum = 2000000;
-        long timeStar = System.currentTimeMillis();// 得到当前的时间
-        for (int i = 0;i < sum;i ++)
-        {
-            map.put("Queue-" + i,"message" + i);
-        }
-        long timeEnd = System.currentTimeMillis();// 得到当前的时间
-        System.out.println("save time :" + (timeEnd - timeStar) + "ms");
+        StringBuffer sb = new StringBuffer();
+        StringBuilder sb1 = new StringBuilder();
+        String s = Integer.toBinaryString(a);
+        System.out.println(a);
+        System.out.println(s);
+        System.out.println(s.length());
 
-        timeStar = System.currentTimeMillis();// 得到当前的时间
-        System.out.println(map.get("Queue-109998"));
-        timeEnd = System.currentTimeMillis();// 得到当前的时间
-        System.out.println("read time :" + (timeEnd - timeStar) + "ms");*/
+        BigInteger bigInteger = BigInteger.valueOf(234);
 
-       /*String str = "199998";
-       byte[] b = str.getBytes();
-       for (byte a : b)
-       {
-           System.out.println(a);
-       }*/
 
-     /*  int a = 16;
-       int b = a >> 12;
-       System.out.println(b);
-       System.out.println(b<<12);*/
-
-      /*  Integer i = 1024;
-
-        System.out.println(Arrays.toString(String.valueOf(i).getBytes()));
-        System.out.println(i.byteValue());*/
-
-        List<String> list = new ArrayList<>();
-        list.add("a");
-        list.add("b");
-        list.add("c");
-        list.add("d");
-
-        List<String> sublist = list.subList(4,1);
-        for (String a : sublist)
-        {
-            System.out.println(a);
-        }
-    /*    String field = "good";
-        String str = field + "";
-        if(field == str)
-            System.out.println("equal");
-        else
-            System.out.println("not equal");*/
 
     }
-
+    static int test()
+    {
+        int x = 1;
+        try
+        {
+            return x;
+        }
+        finally
+        {
+            ++x;
+        }
+    }
     public void testNode() {
 
         int[] pos = {1, 2, 1, 2, 2};
