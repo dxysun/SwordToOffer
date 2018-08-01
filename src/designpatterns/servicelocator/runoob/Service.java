@@ -1,0 +1,6 @@
+package designpatterns.servicelocator.runoob;
+
+public interface Service {
+    public String getName();
+    public void execute();
+}

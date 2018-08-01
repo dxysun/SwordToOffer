@@ -73,6 +73,26 @@ public class MyTest {
         System.out.println(s.length());
 
         BigInteger bigInteger = BigInteger.valueOf(234);
+        Stack<String> stack = new Stack<>();
+
+        Vector<String> vector = new Vector<>();
+
+        LinkedList<String> linkedList = new LinkedList<>();
+        ArrayList<String> arrayList = new ArrayList<>();
+        HashSet<String> hashSet = new HashSet<>();
+        hashSet.add("123");
+        HashMap<String,String> hashMap = new HashMap<>();
+
+
+        int[] ints = {1,2,3,4};
+
+        List list = Arrays.asList("Larry", "Moe", "Curly");
+
+
+        List list1 = Arrays.asList(ints);
+
+
+
 
 
 

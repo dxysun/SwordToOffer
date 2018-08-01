@@ -67,11 +67,16 @@ public class Main {
             count += N / i;
         }
         System.out.println(count);
+
+
     }
 
     public static void main(String[] args){
+        String str = "a";
+        str.hashCode();
+        Integer b = 0;
+        b.hashCode();
 //        binaryConversion();
-
         numOfZero();
     }
 }
