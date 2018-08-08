@@ -15,7 +15,9 @@ public class JDKProxyTest {
         try {
             Person obj = (Person)new JDK58().getInstance(new XieMu());
             System.out.println(obj.getClass());
-            obj.findJob();
+//            obj.findJob();
+            String str = obj.testReturn();
+            System.out.println(str);
 
 
             //原理：
@@ -29,10 +31,10 @@ public class JDKProxyTest {
             //JDK中有个规范，只要要是$开头的一般都是自动生成的
 
             //通过反编译工具可以查看源代码
-            byte [] bytes = ProxyGenerator.generateProxyClass("$Proxy0",new Class[]{Person.class});
+          /*  byte [] bytes = ProxyGenerator.generateProxyClass("$Proxy0",new Class[]{Person.class});
             FileOutputStream os = new FileOutputStream("E://$Proxy0.class");
             os.write(bytes);
-            os.close();
+            os.close();*/
 
 
 

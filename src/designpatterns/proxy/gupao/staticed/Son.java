@@ -26,4 +26,9 @@ public class Son implements Person{
     public void findJob() {
 
     }
+
+    @Override
+    public String testReturn() {
+        return null;
+    }
 }

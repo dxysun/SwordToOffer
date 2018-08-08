@@ -12,6 +12,6 @@ public interface Person {
     public void buy();
 
     public void findJob();
-
+    public String testReturn();
     //......
 }

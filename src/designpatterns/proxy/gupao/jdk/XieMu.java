@@ -29,5 +29,11 @@ public class XieMu implements Person {
     public void findJob() {
         System.out.println("月薪20K-50k");
         System.out.println("找工作");
+
+    }
+    public String testReturn() {
+        System.out.println("test");
+        return "test return";
+
     }
 }
