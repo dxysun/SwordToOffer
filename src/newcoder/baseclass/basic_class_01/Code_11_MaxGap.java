@@ -4,6 +4,11 @@ import java.util.Arrays;
 
 public class Code_11_MaxGap {
 
+	/*
+	 给定一个数组，求如果排序之后，相邻两数的最大差值，要求时
+     间复杂度O(N)，且要求不能用非基于比较的排序。
+     使用桶排序
+	 */
 	public static int maxGap(int[] nums) {
 		if (nums == null || nums.length < 2) {
 			return 0;
@@ -23,7 +28,7 @@ public class Code_11_MaxGap {
 		int[] mins = new int[len + 1];
 		int bid = 0;
 		for (int i = 0; i < len; i++) {
-			bid = bucket(nums[i], len, min, max);
+			bid = bucket(nums[i], len, min, max);   //分到哪个桶中
 			mins[bid] = hasNum[bid] ? Math.min(mins[bid], nums[i]) : nums[i];
 			maxs[bid] = hasNum[bid] ? Math.max(maxs[bid], nums[i]) : nums[i];
 			hasNum[bid] = true;

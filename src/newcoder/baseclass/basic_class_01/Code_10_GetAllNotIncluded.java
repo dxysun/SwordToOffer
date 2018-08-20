@@ -7,6 +7,7 @@ import java.util.List;
 
 public class Code_10_GetAllNotIncluded {
 
+
 	public static List<Integer> GetAllNotIncluded(int[] A, int[] B) {
 		List<Integer> res = new ArrayList<>();
 		for (int i = 0; i < B.length; i++) {

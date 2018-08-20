@@ -6,6 +6,8 @@ import java.util.PriorityQueue;
 import java.util.Set;
 
 // undirected graph only
+// 最小生成树
+// 从点出发，依次取出所连边中权值最小的一条
 public class Code_05_Prim {
 
 	public static class EdgeComparator implements Comparator<Edge> {

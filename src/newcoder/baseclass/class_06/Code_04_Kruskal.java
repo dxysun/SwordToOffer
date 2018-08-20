@@ -8,6 +8,8 @@ import java.util.PriorityQueue;
 import java.util.Set;
 
 //undirected graph only
+// 最小生成树
+// 从边的角度出发，每次找权值最小的边，在不构成环的情况下，将该边加入最小生成树，知道加入所有顶点
 public class Code_04_Kruskal {
 
 	// Union-Find Set

@@ -1,5 +1,8 @@
 package newcoder.baseclass.class_03;
 
+import java.util.HashSet;
+import java.util.Set;
+
 public class Code_14_FindFirstIntersectNode {
 
 	public static class Node {
@@ -45,6 +48,21 @@ public class Code_14_FindFirstIntersectNode {
 			n2 = n2.next;
 		}
 		return n1;
+
+	/*	// 使用 set
+		if (head == null)
+			return null;
+		Set<Node> set = new HashSet<>();
+		Node node = head;
+		while (node != null){
+			if(set.contains(node)){
+				return node;
+			}
+			else
+				set.add(node);
+			node = node.next;
+		}
+		return null;*/
 	}
 
 	public static Node noLoop(Node head1, Node head2) {

@@ -6,6 +6,12 @@ import java.util.Scanner;
 import java.util.Stack;
 
 public class TwoTree {
+    public static class TreeNode{
+        int val;
+        TreeNode left;
+        TreeNode right;
+    }
+
 
     public static int minNumberInRotateArray(int [] array) {
         if(array.length == 0)
@@ -250,8 +256,4 @@ public class TwoTree {
         System.out.println(b.codePointCount(0,b.length()));
     }
 }
-class TreeNode{
-    int val;
-    TreeNode left;
-    TreeNode right;
-}
+

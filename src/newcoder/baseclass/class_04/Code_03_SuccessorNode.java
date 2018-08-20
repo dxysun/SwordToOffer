@@ -30,9 +30,7 @@ public class Code_03_SuccessorNode {
 	}
 
 	public static Node getLeftMost(Node node) {
-		if (node == null) {
-			return node;
-		}
+
 		while (node.left != null) {
 			node = node.left;
 		}

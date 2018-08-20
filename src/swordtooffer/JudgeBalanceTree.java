@@ -5,8 +5,8 @@ public class JudgeBalanceTree {
     public int TreeDepth(TreeNode root) {
         if(root == null)
             return 0;
-        if(root.left == null && root.right == null)
-            return 1;
+   /*     if(root.left == null && root.right == null)
+            return 1;*/
         int left  = TreeDepth(root.left);
         int right = TreeDepth(root.right);
         int max = left > right ? left : right;

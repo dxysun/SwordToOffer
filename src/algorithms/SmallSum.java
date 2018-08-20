@@ -46,6 +46,10 @@ public class SmallSum {
         int sum = 0;
         while (pl <= m && pr <= r){
             sum += a[pl] < a[pr] ? a[pl] * (r - pr + 1) : 0;
+            if(a[pl] > a[pr])
+            {
+                System.out.println(a[pl] + " " + a[pr]);
+            }
             help[i ++] = a[pl] < a[pr] ? a[pl ++] : a[pr ++];
         }
         while (pl <= m){
@@ -60,7 +64,8 @@ public class SmallSum {
         return sum;
     }
     public static void main(String[] args) {
-        int[] a = new int[]{1,3,4,2,5};
+//        int[] a = new int[]{1,3,4,2,5};
+        int [] a = new int[]{9,7,5,8,3,1};
         int sum = mergeSort(a);
         System.out.println(sum);
 

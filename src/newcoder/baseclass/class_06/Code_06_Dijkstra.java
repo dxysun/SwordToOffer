@@ -5,6 +5,9 @@ import java.util.HashSet;
 import java.util.Map.Entry;
 
 // no negative weight
+// 有向图
+// 求原点到其他各点的最短路径
+// 先求与原点能达到的长度最短的路径，在求次短的
 public class Code_06_Dijkstra {
 
 	public static HashMap<Node, Integer> dijkstra1(Node head) {

@@ -9,19 +9,19 @@ public class Code_01_MorrisTraversal {
 			return;
 		}
 		
-		// 1
+		// 1 先序
 		//System.out.println(head.value);
 		
 		
 		process(head.left);
 		
-		// 2
+		// 2 中序
 		//System.out.println(head.value);
 		
 		
 		process(head.right);
 		
-		// 3
+		// 3 后序
 		//System.out.println(head.value);
 	}
 	

@@ -18,7 +18,8 @@ public class Code_09_FindNumInSortedMatrix {
 	}
 
 	public static void main(String[] args) {
-		int[][] matrix = new int[][] { { 0, 1, 2, 3, 4, 5, 6 },// 0
+		int[][] matrix = new int[][] {
+				{ 0, 1, 2, 3, 4, 5, 6 },// 0
 				{ 10, 12, 13, 15, 16, 17, 18 },// 1
 				{ 23, 24, 25, 26, 27, 28, 29 },// 2
 				{ 44, 45, 46, 47, 48, 49, 50 },// 3

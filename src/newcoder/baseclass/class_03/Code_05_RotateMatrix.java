@@ -5,8 +5,8 @@ public class Code_05_RotateMatrix {
 	public static void rotate(int[][] matrix) {
 		int tR = 0;
 		int tC = 0;
-		int dR = matrix.length - 1;
-		int dC = matrix[0].length - 1;
+		int dR = matrix.length - 1;   //行数
+		int dC = matrix[0].length - 1;   //列数
 		while (tR < dR) {
 			rotateEdge(matrix, tR++, tC++, dR--, dC--);
 		}
