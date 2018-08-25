@@ -6,6 +6,7 @@ import java.util.Comparator;
 
 给定一个字符串类型的数组strs，找到一种拼接方式，使得把所
 有字 符串拼起来之后形成的字符串具有最低的字典序。
+
  */
 public class Code_05_LowestLexicography {
 
@@ -25,6 +26,7 @@ public class Code_05_LowestLexicography {
 		String res = "";
 		for (int i = 0; i < strs.length; i++) {
 			res += strs[i];
+            res += "\n";
 		}
 		return res;
 	}

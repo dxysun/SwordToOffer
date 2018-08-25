@@ -50,6 +50,9 @@ public class Code_03_Print_All_Subsquences {
 	public static void main(String[] args) {
 		String test = "abc";
 		printAllSubsquence(test);
+
+/*		char[] cs = {0,'q','k'};
+		System.out.println(String.valueOf(cs));*/
 	}
 
 }
